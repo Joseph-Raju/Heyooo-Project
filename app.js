@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
-  User.findById('5fc794c111281839a4ed9721')
+  User.findById('5fc873a5ac84c92ef4d63f53')
     .then(user => {
       req.user = user;
       next();
@@ -42,7 +42,7 @@ mongoose
         const user = new User({
           name: 'Joseph',
           email: 's@gmail.com',
-          cart: {
+          wishlist: {
             items: []
           }
         });
